@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clone Disney+</title>
     <link rel="stylesheet" href="dist/css/main.css">
+    <script src="./src/main.js" defer></script>
 </head>
 <body>
     <section class="hero">
@@ -38,6 +39,81 @@
                 *O preço pode variar caso a assinatura seja feita através de outras plataformas
             </p>
         </div>
+    </section>
+    <section class="shows">
+        <nav class="shows__tabs">
+            <button data-tab-button="em_breve" class="shows__tabs__button shows__tabs__button--is-active">
+                Em breve
+            </button>
+            <button data-tab-button="populares" class="shows__tabs__button">
+                Mais populares
+            </button>
+            <button data-tab-button="star_plus" class="shows__tabs__button">
+                Mais no Star+
+            </button>
+        </nav>
+        <ul data-tab-id="em_breve" class="shows__list shows__list--is-active">
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/spidey.jpg" alt="Poster do filme Spidey">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/desencantada.jpg" alt="Poster do filme Desencantada">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/lobisomem.jpg" alt="Poster do filme Lobisomem">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/sem_limites.jpg" alt="Poster do filme Sem Limites">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/the_santa_clauses.jpg" alt="Poster do filme The Santa Clauses">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/em_breve/willow.jpg" alt="Poster do filme Willow">                
+            </li>
+        </ul>
+        
+        <ul data-tab-id="populares" class="shows__list">
+            <li class="shows__list__item">
+                <img src="src/images/mais_populares/bluey.jpg" alt="Imagem da série Bluey">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/mais_populares/cavaleira_da_lua.jpg" alt="Poster da série Cavaleira da Lua">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/mais_populares/o_incrivel_dr_pol.jpg" alt="Imagem da série O Incrível Dr. Pol">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/mais_populares/obi_wan.jpg" alt="Poster da série Obi-Wan">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/mais_populares/red.jpg" alt="Poster do filme Red: Crescer é uma Fera">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/mais_populares/tudo_igual_sqn.jpg" alt="Poster da série Tudo Igual, SQN">                
+            </li>
+        </ul>
+
+        <ul data-tab-id="star_plus" class="shows__list">
+            <li class="shows__list__item">
+                <img src="src/images/mais_no_star_plus/belair.jpg" alt="Poster da série Bel-Air">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/mais_no_star_plus/libertadores.jpg" alt="Imagem da Libertadores">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/mais_no_star_plus/nba.jpg" alt="Imagem da NBA">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/mais_no_star_plus/os_simpson.jpg" alt="Poster da série Os Simpsons">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/mais_no_star_plus/premier_league.jpg" alt="Imagem da Premier League">
+            </li>
+            <li class="shows__list__item">
+                <img src="src/images/mais_no_star_plus/the_kardashians.jpg" alt="Poster da série The Kardashians">
+            </li>
+        </ul>
     </section>
 </body>
 </html>
