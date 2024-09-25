@@ -24,7 +24,7 @@ body{
     font-family: Avenir, sans-serif;
 }
 
-@mixin text($fontSize: 16px){
+@mixin text($fontSize: 14px){
     font-size: $fontSize;
     line-height: $fontSize + 10px;
     color: variaveis.$corTextSecundario;
@@ -48,13 +48,13 @@ body{
 }
 
 .link-text{
-    @include text(18px);
+    @include text(15px);
     color: variaveis.$corTextSecundario;
     text-decoration: underline;
 }
 
 .title--big{
-    @include title(44px);
+    @include title(40px);
 }
 
 .title {
@@ -62,5 +62,5 @@ body{
 }
 
 .title--small {
-    @include title(28px);
+    @include title(22px);
 }
