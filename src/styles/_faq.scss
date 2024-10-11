@@ -7,7 +7,7 @@
     }
 
     &__questions{
-        li {
+        li{
             list-style-type: none;
         }
         &__item {
@@ -50,6 +50,12 @@
                     height: auto;
                     padding-bottom: 24px;
                     transition: height, .5s ease;
+
+                    li{
+                        list-style-type: circle;
+                        margin-left: 50px;
+                        margin-top: 20px;
+                    }
                 }  
             }
         }
