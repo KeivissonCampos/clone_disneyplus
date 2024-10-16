@@ -2,7 +2,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('[data-tab-button]');
     const question = document.querySelectorAll('[data-faq-question]');
 
-    // Adiciona o evento de clique para cada botão de aba
+    const heroSection = document.querySelector('.hero');
+    const alturaHero = heroSection.clientHeight;
+
+    window.addEventListener('scroll', function(){
+        const posicaoAtual = window.scrollY;
+
+        if(posicaoAtual < alturaHero){
+            ocutaElementosDoHeader();
+        }else{
+            exibeElementosDoHeader();
+        }
+    })
+
+    // Seção de atrações. programação das abas
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', function(botao) {
             const abaAlvo = botao.target.dataset.tabButton;
@@ -17,10 +30,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Seção FAQ. Accordions
     for (let i = 0; i < question.length; i++){
         question[i].addEventListener('click', abreOuFechaResposta);
     }
 });
+
+function ocutaElementosDoHeader(){
+    const header = document.querySelector('header');
+    header.classList.add('header--is-hidden');
+}
+
+function exibeElementosDoHeader(){
+    const header = document.querySelector('header');
+    header.classList.remove('header--is-hidden');
+}
 
 function abreOuFechaResposta(elemento){
     const classe = 'faq__questions__item--is-open';
